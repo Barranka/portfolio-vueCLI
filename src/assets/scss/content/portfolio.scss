@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,300&display=swap');
+
+.title-container {
+	display: flex;
+	align-self: start;
+}
+.cards {
+	margin: 30px 0 100px;
+	font-family: 'Roboto', sans-serif;
+	max-width: 1230px;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	&__wrapper {
+		max-width: 410px;
+		padding: 10px;
+		&:hover {
+			.card {
+				box-shadow: 0 0 1px 0 #dedede, 0 0 10px 8px #dedede;
+			}
+			.card__link-icon {
+				opacity: 0.7;
+				transform: scale(1.2);
+			}
+			.card__img_active {
+				display: none;
+			}
+			.card__img_hover {
+				display: unset;
+			}
+		}
+	}
+}
+.card {
+	padding: 10px 30px;
+	transition: box-shadow .3s;
+	&__img_hover {
+		display: none;
+	}
+	&__img {
+		max-width: 100%;
+		margin: 15px 0;
+		border: 1px solid #e6e2e2;
+	}
+	&__info {
+		margin-bottom: 30px;
+	}
+	&__title {
+		color: $active-color;
+		font-size: 24px;
+		max-width: 250px;
+		font-weight: 600;
+	}
+	&__head {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		margin-bottom: 15px;
+	}
+	&__web {
+		margin: 20px 20px 10px 0;
+	}
+	&__link {
+		margin: 20px 20px 18px 0px;
+	}
+	&__link-icon {
+		cursor: pointer;
+		opacity: 0.5;
+		max-width: 40px;
+		transition: 1s;
+	}
+	&__props {
+		font-size: .85em;
+		margin: 15px 0;
+		display: flex;
+		flex-direction: row;
+	}
+	&__descr {
+		margin-top: 20px;
+		font-size: .85em;
+	}
+	&__i {
+		display: flex;
+		flex-direction: column;
+	}
+	&__i-td {
+		display: flex;
+		flex-basis: 40px;
+	}
+	&__i-tr {
+		display: flex;
+		flex-basis: 40px;
+		min-width: 100px;
+	}
+}
+
+
+
+// Adaptive
+@media (max-width: $smDesktopWidth ) {
+	.cards__wrapper {
+		&:hover {
+			.card {
+				box-shadow: none;
+			}
+		}
+	}
+	.card {
+		border: 1px solid #e6e6e6;
+		&:hover {
+			.card__img_active {
+				display: unset;
+			}
+			.card__img_hover {
+				display: none;
+			}
+		}
+	}
+}
+@media (max-width: $tableWidth  ) {
+	.card {
+		&__web {
+			display: flex;
+			flex-direction: row;
+			justify-content: start;
+		}
+		&__link {
+			margin: 15px 15px 15px 0;
+		}
+		&__link-icon {
+			max-width: 30px;
+			margin-right: 5px;
+		}
+		&__head {
+			flex-direction: column;
+		}
+
+	}
+	.cards__wrapper {
+		max-width: 310px;
+		font-size: 90%;
+	}
+	hr {
+		display: none;
+	}
+}
+@media (max-width: $phoneWidth) {
+	.card {
+		max-width: 320px;
+		&__title {
+			font-size: 20px;
+		}
+	}
+	.cards {
+		margin-bottom: 30px;
+	}
+}

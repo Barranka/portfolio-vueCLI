@@ -1,0 +1,85 @@
+.skills {
+	display: flex;
+	flex-direction: column;
+	background: #fff;
+	box-shadow: 30px 30px 30px rgba(0,0,0,.04);
+	font-size: 20px;
+	&__wrapper, &__wrapper-another {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		padding: 30px;
+   }
+    &__wrapper {
+	 	border-bottom: 1px solid #d7e3e6;
+    }
+    &__card {
+		padding: 20px;
+	}
+   	&__card-title {
+	   	font-size: 30px;
+	   	margin-bottom: 10px;
+	   	font-weight: 600;
+   	}
+}
+
+
+
+// Adaptive
+
+@media (max-width: $tableWidth ) {
+	.skills {
+		font-size: 16px;
+		max-width: 500px;
+		padding: 0 10px;
+		&__card-title {
+			font-size: 24px;
+		}
+		&__card-descr {
+			tab-size: 1;
+		}
+		&__wrapper {
+			border-bottom: none;
+			padding: 20px 0;
+	  	}
+		&__card {
+			border-left: 1px solid #d7e3e6;
+	   	}
+	}
+}
+
+@media (max-width: $phoneWidth ) {
+	.skills {
+		font-size: 14px;
+		max-width: 400px;
+		padding: 0;
+		&__card-title {
+			font-size: 22px;
+		}
+		&__wrapper {
+			border-bottom: none;
+	   	}
+		&__card {
+			border-left: 1px solid #d7e3e6;
+	   	}
+	}
+}
+
+@media (max-width: $smPhoneWidth ) {
+	.skills {
+		font-size: 12px;
+		max-width: 200px;
+		&__card-title {
+			font-size: 18px;
+		}
+		&__wrapper {
+			border: none;
+	  	}
+		&__card {
+			border-left: 1px solid #d7e3e6;
+	   	}
+	}
+}
+
+
+

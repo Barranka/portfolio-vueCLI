@@ -1,0 +1,83 @@
+.info {
+	max-width: 1000px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+	margin-bottom: 200px;
+	&__text {
+		max-width: 49%;
+		margin-top: 400px;
+		padding: 50px 50px;
+		box-shadow: 0 0 20px 5px rgba($main-color, 0.2);
+		background-color: $white-color;
+		p {
+			padding: 15px;
+			color:  $active-color;
+		}
+	}
+	&__avatar {
+		max-width: 49%;
+	}
+	&__avatar-adapt {
+		display: none;
+	}
+}
+
+// Adaptive
+
+@media (max-width: $smDesktopWidth ) {
+	.info {
+		&__text {
+			max-width: 55%;
+			p {
+				font-size: 90%;
+				padding: 10px;
+				color:  $active-color;
+			}
+		}
+		&__avatar {
+			max-width: 45%;
+			margin-left: 20px;
+		}
+	}
+}
+
+@media (max-width: $tableWidth ) {
+	.info {
+		margin-top: 50px;
+		display: flex;
+		flex-direction: column;
+		&__text {
+			max-width: 90%;
+			padding: 40px 20px;
+			margin-top: 0px;
+			p {
+				padding: 10px;
+			}
+		}
+		&__avatar {
+			display: none;
+		}
+		&__avatar-adapt {
+			display: unset;
+			max-width: 60%;
+			margin-bottom: 20px;
+		}
+	}
+
+}
+
+@media (max-width: $phoneWidth ) {
+	.info {
+		margin-bottom: 50px;
+		&__text {
+			p {
+				padding: 10px;
+				font-size: 80%;
+			}
+		}
+
+	}
+}
+

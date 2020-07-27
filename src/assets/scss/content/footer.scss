@@ -1,0 +1,56 @@
+footer {
+	display: flex;
+	position: relative;
+	background: $active-color;
+}
+.footer-container {
+	width: 100%;
+	flex: 0 0 auto;
+	position: relative;
+	padding: 20px 50px;
+}
+.footer {
+	padding: 0 20px;
+	&__item {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__sign-text {
+		font-size: 20px;
+		color: $white-color;
+	}
+	&__web-link {
+		max-width: 40px;
+		margin-right: 15px;
+	}
+	&__sign,
+	&__web {
+		padding: 10px 0;
+	}
+}
+
+// Adaptive
+
+@media (max-width: $tableWidth ) {
+	.footer__sign {
+		display: none;
+	}
+	.footer__web {
+		margin: 0 auto;
+	}
+}
+
+@media (max-width: $phoneWidth ) {
+	.footer__web-link {
+		width: 26px;
+	}
+}
+
+@media (max-width: $smPhoneWidth ) {
+	.footer__web {
+		padding: 10px;
+	}
+}
+

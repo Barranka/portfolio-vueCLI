@@ -1,0 +1,134 @@
+@import 'reset';
+
+
+// Font
+$mainFont                : 'Montserrat', Arial, sans-serif;
+
+// Size
+$mainFontColor           : #101010;
+$mainFontSize            : 18px;
+$mainFontWeight          : 400;
+$mainLineHeight          : 1.4;
+
+$desktopWidth            : 1280px;
+$smDesktopWidth          : 980px;
+$tableWidth              : 768px;
+$phoneWidth              : 480px;
+$smPhoneWidth            : 320px;
+
+// Title size
+$titleSize					:45px;
+$titleSizeTwo			    :36px;
+$titleSizeThree      		:28px;
+
+//Color
+$main-color       		 : #334456;
+$active-color		 	 : #267a96;
+$white-color			 :#ffffff;
+$neutral-color			 :#a9a9a9;
+
+html,
+body {
+	height: 100%;
+	font-family: $mainFont;
+	font-size: $mainFontSize;
+  	font-weight: $mainFontWeight;
+}
+
+section, .section {
+	margin-right: 0px;
+	display: flex;
+	min-height: 80vh;
+	position: relative;
+	padding: 20px 0;
+	@media screen and (max-width: $desktopWidth) {
+	  padding: 36px 0;
+	}
+	@media screen and (max-width: $desktopWidth) {
+	  padding: 28px 0;
+	}
+	@media screen and (max-width: $desktopWidth) {
+	  padding: 20px 0;
+	}
+}
+
+.container {
+	width: 100%;
+	flex: 0 0 auto;
+	position: relative;
+	max-width: $desktopWidth;
+	margin: 0 auto;
+	padding: 0 40px;
+	@media screen and (max-width: $smDesktopWidth) {
+		max-width: $tableWidth;
+		padding: 0px 0px;
+	}
+	@media screen and (max-width: $tableWidth) {
+		max-width: $phoneWidth;
+	}
+	@media screen and (max-width: $phoneWidth) {
+		max-width: $smPhoneWidth;
+	}
+}
+
+.container-content {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 50px;
+	@media screen and (max-width: $smPhoneWidth) {
+		padding: 0 20px;
+		margin: 0;
+	}
+}
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	margin: 0 auto;
+}
+
+.wrapper-content {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	&.wrapper-content--fixed {
+		margin-top: 80px;
+	}
+}
+.title {
+	font-size: $titleSize;
+	font-weight: 600;
+	text-shadow: 2px 2px 3px $white-color;
+	color: $active-color;
+	margin: 70px 20px 20px 20px;
+	@media (max-width: $tableWidth ) {
+		font-size: $titleSizeTwo;
+	}
+	@media (max-width: $phoneWidth ) {
+		font-size: $titleSizeThree;
+		margin-top: 20px;
+	}
+}
+.image-icon {
+	margin-bottom: 50px;
+	color: $active-color;
+	filter: invert(1%) sepia(1%) saturate(1%) hue-rotate(1deg) brightness(1000%) contrast(30%);
+	@media (max-width: $smPhoneWidth  ) {
+		margin-bottom: 30px;
+		max-width: 200px;
+	}
+}
+
+@import 'common';
+
+
+@media all and (orientation: portrait) {
+	section, .section, .wrapper-content, .banner-content {
+		min-height: 60vw;
+	}
+	.fullscreen {
+		background: url(/img/banner5.jpg) no-repeat 50% 165px/85vw fixed;
+	}
+}
