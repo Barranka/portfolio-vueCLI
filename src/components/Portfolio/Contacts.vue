@@ -58,7 +58,7 @@ export default {
 
 <style lang="scss" scoped>
 .fullscreen {
-	background: url('/img/bann.jpg') no-repeat center/90% fixed;
+	background: url('/portfolio-vueCLI/img/bann.jpg') no-repeat center/90% fixed;
 	min-height: 90vh;
 }
 .container {
