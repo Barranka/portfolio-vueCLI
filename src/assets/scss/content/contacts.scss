@@ -79,9 +79,17 @@
 
 //adaptive
 
+@media (max-width: $smDesktopWidth ) {
+	.contact__icon {
+		&:before {
+			content: none;
+		}
+
+	}
+}
 @media (max-width: $tableWidth) {
 	.contact {
-		min-width: 340px;
+		min-width: 250px;
 		&__wrapper {
 			border: none;
 		}
@@ -93,7 +101,7 @@
 
 @media (max-width: $phoneWidth ) {
 	.contact {
-		min-width: 240px;
+		min-width: 230px;
 		.contact__item-descr {
 			font-size: 70%;
 		}
