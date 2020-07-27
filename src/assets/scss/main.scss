@@ -132,3 +132,10 @@ section, .section {
 		background: url(/img/banner5.jpg) no-repeat 50% 165px/85vw fixed;
 	}
 }
+@media all and (orientation: portrait) {
+	@media (max-width: $tableWidth ) {
+		.banner-content {
+			min-height: 60vh;
+		}
+	}
+}
