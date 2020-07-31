@@ -129,7 +129,7 @@ section, .section {
 		min-height: 60vw;
 	}
 	.fullscreen {
-		background: url('/portfolio-vueCLI//img/bann.jpg') no-repeat 50% 165px/85vw fixed;
+		background: url('/portfolio-vueCLI/img/bann.jpg') no-repeat 50% 165px/85vw fixed;
 	}
 }
 @media all and (orientation: portrait) {
@@ -137,10 +137,16 @@ section, .section {
 		.banner-content {
 			min-height: 80vh;
 		}
+		.fullscreen {
+			background: url('/portfolio-vueCLI/img/bann.jpg') no-repeat 80% 300px/96vw fixed;
+		}
 	}
 	@media (max-width: $phoneWidth ) {
 		.banner-content {
 			min-height: 70vh;
+		}
+		.fullscreen {
+			background: url('/portfolio-vueCLI/img/bann.jpg') no-repeat 80% 250px/96vw fixed;
 		}
 	}
 }
