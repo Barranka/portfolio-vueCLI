@@ -129,13 +129,18 @@ section, .section {
 		min-height: 60vw;
 	}
 	.fullscreen {
-		background: url(/img/banner5.jpg) no-repeat 50% 165px/85vw fixed;
+		background: url('/portfolio-vueCLI//img/banner5.jpg') no-repeat 50% 165px/85vw fixed;
 	}
 }
 @media all and (orientation: portrait) {
-	@media (max-width: $tableWidth ) {
+	@media (max-width: $desktopWidth ) {
 		.banner-content {
-			min-height: 60vh;
+			min-height: 80vh;
+		}
+	}
+	@media (max-width: $phoneWidth ) {
+		.banner-content {
+			min-height: 70vh;
 		}
 	}
 }
